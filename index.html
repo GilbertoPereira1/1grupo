@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" id="inputMaiusculo" placeholder="Tudo que vc escrever aqui ficara maiusculo">
 </body>
+    <script>
+    let input = document.getElementById("inputMaiusculo");
+    input.addEventListener("keyup",() => input.value = input.value.toUpperCase());
+    </script>
 </html>
