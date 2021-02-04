@@ -6,6 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <img id="image" src="img/cuidado.jpg" width="200px">
+    <input id="botao" type="button" value="Trocar" onclick="alterar()">
+
+    <script>
+        let i = 1;
+        function alterar(){
+            if(i <= 5){
+                document.getElementById("image").src = `img/download${i++}.jpg`; 
+            }else{
+                i = 1;
+                document.getElementById("image").src = `img/download${i}.jpg`; 
+            }    
+        }
+    </script>
 </body>
 </html>
