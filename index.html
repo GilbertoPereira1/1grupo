@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <title>Document</title>
     <link href="./style.css" rel="stylesheet">
   <style>
@@ -50,6 +53,11 @@
 
 <body>
 
+    <div class="container">
+        <button type="button" class="bot-click">Botão</button>
+    </div>
+    
+
     <img id="image" src="img/cuidado.jpg" width="200px">
     <input id="botao" type="button" value="Trocar" onclick="alterar()">
 
@@ -58,6 +66,15 @@
     <div id="receiver"></div>
 
     <script>
+      
+            $(document).ready(function(){
+       $(".bot-click").click(function(){
+          $(".bot-click")
+          .removeClass("btn-danger"); // remove a classe de todos
+          $(this)
+          .addClass("btn-danger"); // adiciona a classe ao botão clicado
+       });
+    });
          let i = 1;
         function alterar(){
             if(i <= 5){
