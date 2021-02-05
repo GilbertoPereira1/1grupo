@@ -1,0 +1,9 @@
+#textoGrande{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#textoGrande:hover{
+    font-size: 70px;
+}
