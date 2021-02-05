@@ -50,11 +50,23 @@
 
 <body>
 
+    <img id="image" src="img/cuidado.jpg" width="200px">
+    <input id="botao" type="button" value="Trocar" onclick="alterar()">
 
+ 
     <button id="creator" onclick="create()">Click me!</button>
     <div id="receiver"></div>
 
     <script>
+         let i = 1;
+        function alterar(){
+            if(i <= 5){
+                document.getElementById("image").src = `img/download${i++}.jpg`; 
+            }else{
+                i = 1;
+                document.getElementById("image").src = `img/download${i}.jpg`; 
+            }    
+        }
 
         function geraCor() { //GERA CORES ALEATORIAS
             let hexadecimais = '0123456789ABCDEF';
@@ -97,6 +109,7 @@
 
     <h1>Grupo 1 </h1>
     
+
 
 </body>
    
