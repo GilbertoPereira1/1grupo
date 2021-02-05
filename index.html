@@ -24,11 +24,19 @@
 
 </head>
 <body>
+
+    <input type="text" id="inputMaiusculo" placeholder="Tudo que vc escrever aqui ficara maiusculo">
+
     <p id="textoGrande" >Texto que deve ficar grande ao passar o mouse</p>
     <script src = "java.js"></script>
 
 
     <h1>Grupo 1 </h1>
     
+
 </body>
+    <script>
+    let input = document.getElementById("inputMaiusculo");
+    input.addEventListener("keyup",() => input.value = input.value.toUpperCase());
+    </script>
 </html>
