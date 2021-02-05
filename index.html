@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./style.css" rel="stylesheet">
   <style>
+        body{
+            width: 100%;
+        }
+
+        #creator{
+            margin: 0, auto;
+        }
+
+        #receiver{
+            display: flex;
+            flex-flow: wrap;
+            align-items: center;
+            margin: 0, auto;
+            width: 100%;
+            height: 50%;
+
+        }
+
+        .divizinha {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+        }
 
     h1{
         background-image: linear-gradient( 94.3deg,  rgb(3, 3, 3) 10.9%, rgba(81,84,115,1) 87.1% );
@@ -23,7 +47,47 @@
   </style>
 
 </head>
+
 <body>
+
+
+    <button id="creator" onclick="create()">Click me!</button>
+    <div id="receiver"></div>
+
+    <script>
+
+        function geraCor() { //GERA CORES ALEATORIAS
+            let hexadecimais = '0123456789ABCDEF';
+            let cor = '#';
+            for (let i = 0; i < 6; i++) {
+                cor += hexadecimais[Math.floor(Math.random() * 16)];
+            }
+            return cor;
+        }
+
+        let receiver = document.querySelector("#receiver");
+
+        function create() {
+            let element = document.createElement("div");
+            let paragraph = document.createElement("p");
+            paragraph.textContent = "OI SOU UMA DIV"
+
+            element.appendChild(paragraph);
+
+            element.setAttribute("class", "divizinha");
+            element.style.backgroundColor = geraCor();
+
+            receiver.appendChild(element);
+        }
+        
+       
+      let input = document.getElementById("inputMaiusculo");
+      input.addEventListener("keyup",() => input.value = input.value.toUpperCase());
+
+    </script>
+
+
+
 
     <input type="text" id="inputMaiusculo" placeholder="Tudo que vc escrever aqui ficara maiusculo">
 
@@ -35,8 +99,7 @@
     
 
 </body>
-    <script>
-    let input = document.getElementById("inputMaiusculo");
-    input.addEventListener("keyup",() => input.value = input.value.toUpperCase());
-    </script>
+   
+
+
 </html>
