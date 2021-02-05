@@ -5,9 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="./style.css" rel="stylesheet">
+  <style>
+        body{
+            width: 100%;
+        }
+
+        #creator{
+            margin: 0, auto;
+        }
+
+        #receiver{
+            display: flex;
+            flex-flow: wrap;
+            align-items: center;
+            margin: 0, auto;
+            width: 100%;
+            height: 50%;
+
+        }
+
+        .divizinha {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+        }
+
+    h1{
+        background-image: linear-gradient( 94.3deg,  rgb(3, 3, 3) 10.9%, rgba(81,84,115,1) 87.1% );
+        font-size: 50px;
+        max-width: 90%;
+        margin: 5% auto;
+        text-align: center;
+        color: #fad000;
+    }
+
+    h1:hover{
+    color: red;
+    }
+
+  </style>
+
 </head>
 
 <body>
+
 
     <button id="creator" onclick="create()">Click me!</button>
     <div id="receiver"></div>
@@ -37,36 +79,27 @@
 
             receiver.appendChild(element);
         }
+        
+       
+      let input = document.getElementById("inputMaiusculo");
+      input.addEventListener("keyup",() => input.value = input.value.toUpperCase());
 
     </script>
 
-    <style>
 
-        body{
-            width: 100%;
-        }
 
-        #creator{
-            margin: 0, auto;
-        }
 
-        #receiver{
-            display: flex;
-            flex-flow: wrap;
-            align-items: center;
-            margin: 0, auto;
-            width: 100%;
-            height: 50%;
+    <input type="text" id="inputMaiusculo" placeholder="Tudo que vc escrever aqui ficara maiusculo">
 
-        }
+    <p id="textoGrande" >Texto que deve ficar grande ao passar o mouse</p>
+    <script src = "java.js"></script>
 
-        .divizinha {
-            display: flex;
-            justify-content: center;
-            width: 50%;
-        }
-    </style>
+
+    <h1>Grupo 1 </h1>
+    
 
 </body>
+   
+
 
 </html>
